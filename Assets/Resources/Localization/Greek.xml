@@ -1,0 +1,9 @@
+<Language>
+  <Entry key="Game_Name">Παιχνίδι!</Entry>
+  <Entry key="Play_Button_Text">Παίξε</Entry>
+  <Entry key="Options_Button_Text">Ρυθμίσεις</Entry>
+    <Entry key="English_RButton_Text">Αγγλικά</Entry>
+  <Entry key="Greek_RButton_Text">Ελληνικά</Entry>
+  <Entry key="Back_Button_Text">Πίσω</Entry>
+  <Entry key="Quit_Button_Text">Έξοδος</Entry>
+</Language>
