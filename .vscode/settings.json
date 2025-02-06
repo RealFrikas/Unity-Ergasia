@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Ergasia.sln"
+    "dotnet.defaultSolution": "Unity-Ergasia.sln"
 }
