@@ -1,7 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Runtime.CompilerServices;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
+
+interface IInteractable
+{
+	public void Interact();
+}
 
 namespace StarterAssets
 {
@@ -9,6 +16,8 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
 #endif
+
+
 	public class FirstPersonController : MonoBehaviour
 	{
 		[Header("Player")]
@@ -42,6 +51,10 @@ namespace StarterAssets
 		public float GroundedRadius = 0.5f;
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
+
+		[Space(10)]
+		public Transform InteractorSource;
+		public float InteractRange = 1.0f;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -115,6 +128,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Interaction();
 		}
 
 		private void LateUpdate()
@@ -244,6 +258,22 @@ namespace StarterAssets
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+		}
+
+		private void Interaction()
+		{
+			if(_input.interact)
+			{
+				Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+				if(Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+				{
+					if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+					{
+						interactObj.Interact();
+					}
+				}
+			}
+		_input.interact = false;
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

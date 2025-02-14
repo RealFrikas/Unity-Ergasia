@@ -27,6 +27,7 @@ public class gem1script : MonoBehaviour
             case 5:
                 break;
         }
+        //test
         playerscript.MoveSpeed = 8.0f;
     }
 }
