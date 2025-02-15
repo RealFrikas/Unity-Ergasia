@@ -78,6 +78,7 @@ public class LocalizationManager : MonoBehaviour
     // Load language from PlayerPrefs on startup
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         if (PlayerPrefs.HasKey("Language"))
         {
             string savedLanguage = PlayerPrefs.GetString("Language");

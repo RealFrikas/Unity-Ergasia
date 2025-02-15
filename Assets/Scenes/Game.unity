@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   gemid: 4
 --- !u!64 &27221345
 MeshCollider:
@@ -346,7 +347,7 @@ Transform:
   m_GameObject: {fileID: 27221343}
   serializedVersion: 2
   m_LocalRotation: {x: -0.14906216, y: -0.7819085, z: -0.32538936, w: 0.51041293}
-  m_LocalPosition: {x: -2.854, y: 96.231, z: -390.192}
+  m_LocalPosition: {x: -3.032, y: 96.341, z: -390.032}
   m_LocalScale: {x: 1.47, y: 1.47, z: 1.47}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1593,6 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   gemid: 3
 --- !u!64 &780374433
 MeshCollider:
@@ -1678,7 +1680,7 @@ Transform:
   m_GameObject: {fileID: 780374431}
   serializedVersion: 2
   m_LocalRotation: {x: -0.14845118, y: 0.057509385, z: 0.04352427, w: 0.9862863}
-  m_LocalPosition: {x: -208.718, y: 101.588, z: -365.116}
+  m_LocalPosition: {x: -208.714, y: 101.697, z: -365.027}
   m_LocalScale: {x: 1.47, y: 1.47, z: 1.47}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2630,6 +2632,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1410441079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410441081}
+  - component: {fileID: 1410441080}
+  m_Layer: 0
+  m_Name: LogicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1410441080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410441079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e18dbe55061684f88dd282345726d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endgame: 0
+--- !u!4 &1410441081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410441079}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -203.63966, y: 98.76986, z: -340.72528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3742,6 +3789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   gemid: 2
 --- !u!64 &1925394118
 MeshCollider:
@@ -4084,6 +4132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   gemid: 5
 --- !u!64 &2051565745
 MeshCollider:
@@ -4168,13 +4217,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051565743}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.44759214, y: 0.077740185, z: 0.2857912, w: 0.84376603}
+  m_LocalRotation: {x: -0.23248613, y: -0.3743011, z: 0.47745734, w: 0.7601864}
   m_LocalPosition: {x: 221.163, y: 100.427, z: 8.448}
   m_LocalScale: {x: 1.47, y: 1.47, z: 1.47}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -53.107, y: -11.984, z: 43.429}
+  m_LocalEulerAnglesHint: {x: 0.227, y: -52.287, z: 64.153}
 --- !u!1 &2114077052
 GameObject:
   m_ObjectHideFlags: 0
@@ -10064,10 +10113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playermovement: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   textDisplay: {fileID: 1124866475}
   speechtext: Hello traveler, did you also come here for the legendary gems? All
     of us have tried to find them before you to no avail... we have created a village
     though, follow the path and then the beach and you'll be there in no time.
+  endgamespeechtext: Oh wow you found them, well i guess we now have to sail back.
+    I don't think I want to return.
   chunkSize: 20
   timer: 5
 --- !u!136 &6792327052511725222
@@ -11275,8 +11327,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playermovement: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   textDisplay: {fileID: 1124866475}
-  speechtext: 
+  speechtext: Hey, nice to see a new face. I'm the leader of this community since
+    i found this gem. I'll rest for now but know that one of the gems is "between
+    the dueling peaks", I can't figure out where that's pointing me at...
+  endgamespeechtext: You found all of them? You're definetely our leader now, I wonder
+    what you will do with that power now.
   chunkSize: 20
   timer: 5
 --- !u!136 &7920668697976299191
@@ -11636,8 +11693,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playermovement: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   textDisplay: {fileID: 1124866475}
   speechtext: 
+  endgamespeechtext: 
   chunkSize: 20
   timer: 5
 --- !u!136 &8235424787276492284
@@ -13142,6 +13201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 8616685849376057750}
+  logic: {fileID: 1410441080}
   gemid: 1
 --- !u!64 &9209979864246333164
 MeshCollider:
@@ -13186,3 +13246,4 @@ SceneRoots:
   - {fileID: 2641985572950914944}
   - {fileID: 1407082884}
   - {fileID: 404611995}
+  - {fileID: 1410441081}
